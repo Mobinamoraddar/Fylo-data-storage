@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  background-color: hsl(229, 57%, 11%);
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.background-img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 50%;
+  overflow: hidden;
+}
+.folders-section {
+  border-radius: 10% 34% 5% 5% / 10% 48% 5% 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(228, 56%, 26%);
+  margin-right: 20px;
+  padding: 30px 80px 20px 30px;
+}
+.folders-logo img {
+  width: 90px;
+}
+.folders-img {
+  display: flex;
+}
+.folders-img img {
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  margin: 10px 10px 10px 0px;
+  padding: 8px;
+  background-color: hsl(229, 57%, 11%);
+}
+
+.container {
+  display: flex;
+  z-index: 9999;
+}
+
+/* STORAGE SECTION */
+
+.storage-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 7px;
+  padding: 18px 28px;
+}
+.right-part {
+  width: 100%;
+  background-color: hsl(228, 56%, 26%);
+}
+
+p,
+span {
+  color: #fff;
+}
+
+.storage-status {
+  font-size: 0.7rem;
+  text-align: start;
+  margin-bottom: 1rem;
+}
+
+.storage-status > span {
+  font-weight: 700;
+}
+
+.bar-box {
+  width: 300px;
+  padding: 2.2px;
+  margin-bottom: 0.6rem;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 6rem;
+}
+.bar {
+  padding: 1.75px;
+  width: 73%;
+  border-radius: 6rem;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  display: flex;
+  justify-content: flex-end;
+}
+.current-level {
+  border-radius: 100%;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #fff;
+}
+.storage-range {
+  display: flex;
+  justify-content: space-between;
+}
+.storage-range > span {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.popup-box {
+  padding: 0.6rem 0.9rem;
+  background-color: #fff;
+  position: absolute;
+  bottom: 7rem;
+  right: 2rem;
+  z-index: 10000;
+  border-radius: 0.5rem;
+  border-bottom-right-radius: 0;
+}
+.popup-box p {
+  color: hsl(229, 57%, 11%);
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 0.8rem;
+  width: 100%;
+}
+.popup-box span {
+  font-size: 0.7rem;
+  color: hsl(229, 7%, 55%);
+}
+
+/* RESPONSIVE DESIGN */
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .background-img-bg {
+    visibility: hidden;
+  }
+  body {
+    background-image: url(images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .storage-section {
+    margin-top: 30px;
+    padding: 40px 40px;
+  }
+
+  .folders-section {
+    padding: 50px 10px 50px 40px;
+  }
+  .folders-logo img {
+    width: 180px;
+  }
+
+  .folders-img img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+  }
+  .bar-box {
+    width: 250px;
+  }
+  .popup-box {
+    padding: 0.8rem 1.2rem;
+    bottom: -1.5rem;
+    right: 6.8rem;
+  }
+}
